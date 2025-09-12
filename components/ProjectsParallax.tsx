@@ -13,7 +13,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
     return useTransform(value, [0, 1], [-distance, distance])
 }
 
-function Image({ id }: { id: number }) {
+function FramerImage({ id }: { id: number }) {
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({ target: ref })
     const y = useParallax(scrollYProgress, 300)
@@ -60,7 +60,7 @@ export default function ProjectsParallax() {
     return (
         <div id="example">
             {[1, 2, 3, 4, 5].map((image, index) => (
-                <Image key={index} id={image} />
+                <FramerImage key={index} id={image} />
             ))}
             <motion.div className="progress" style={{ scaleX }} />
             <StyleSheet />
