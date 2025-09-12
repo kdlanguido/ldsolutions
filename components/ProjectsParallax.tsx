@@ -7,6 +7,7 @@ import {
     useSpring,
     useTransform,
 } from "framer-motion"
+
 import { useRef } from "react"
 
 function useParallax(value: MotionValue<number>, distance: number) {
