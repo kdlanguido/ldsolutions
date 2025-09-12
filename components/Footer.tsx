@@ -1,7 +1,6 @@
 export default function Footer() {
     return (
         <footer className="relative bg-gradient-to-b from-transparent via-[#003B5F]/60 to-[#001726] text-white pb-8 pt-10 px-6 overflow-hidden">
-            {/* Wavy background */}
             <div className="absolute inset-0 opacity-40 pointer-events-none bg-[url('/assets/wave.svg')] bg-repeat-x bg-bottom"></div>
 
             <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -30,8 +29,6 @@ export default function Footer() {
                     </ul>
                 </div>
             </div>
-
-            {/* Bottom Bar */}
             <div className="relative border-t border-gray-600 mt-8 pt-4 text-center text-sm text-gray-400">
                 &copy;{new Date().getFullYear()} LDSolutions All rights reserved.
             </div>

@@ -20,13 +20,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Header />
-          <LoadingProvider>
-            <main className="p-[30px] pt-[120px]">
-              {children}
-            </main>
-          </LoadingProvider>
-          <Footer />
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <div className="flex-1">
+              <LoadingProvider>
+                <main className="p-[30px] pt-[120px]">
+                  {children}
+                </main>
+              </LoadingProvider>
+            </div>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
