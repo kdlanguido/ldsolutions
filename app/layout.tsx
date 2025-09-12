@@ -1,7 +1,8 @@
 import { Header } from "@/components/Header"
 import "./globals.css"
-import { ThemeProvider } from "@/components/Theme-Provider"
+import { ThemeProvider } from "@/components/ThemeProvider"
 import type { Metadata } from "next"
+import LoadingProvider from "@/components/LoadingProvider"
 
 export const metadata: Metadata = {
   title: "LD Solutions",
@@ -19,7 +20,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
-          {children}
+          <LoadingProvider>
+            <main className="p-[30px] pt-[120px]"> {/* adjust to your header height */}
+              {children}
+            </main>
+          </LoadingProvider>
         </ThemeProvider>
       </body>
     </html>
