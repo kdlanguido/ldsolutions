@@ -26,11 +26,10 @@ export default function page() {
                             alt=""
                             width={750}
                             height={750}
-                            className="w-full h-auto object-cover border rounded shadow-[5px_7px_12px_rgba(255,255,255,0.3)]"
+                            className="w-full h-auto object-cover border rounded shadow-[5px_5px_15px_rgba(255,255,255,0.2)]"
                         />
                     </div>
                 </section>
-
                 <section className="flex flex-row justify-between items-center mt-20">
                     <div >
                         <Image
@@ -38,7 +37,7 @@ export default function page() {
                             alt=""
                             width={750}
                             height={750}
-                            className="w-full h-auto object-cover border rounded shadow-[5px_7px_12px_rgba(255,255,255,0.3)]"
+                            className="w-full h-auto object-cover border rounded shadow-[5px_5px_15px_rgba(255,255,255,0.2)]"
                         />
                     </div>
                     <div className="w-3/4 pl-20">

@@ -17,8 +17,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
 function FramerImage({ id }: { id: number }) {
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({ target: ref })
-    const y = useParallax(scrollYProgress, 300)
-
+    const y = useParallax(scrollYProgress, 0)
     return (
         <section className="img-container">
             <div ref={ref}>
@@ -34,7 +33,7 @@ function FramerImage({ id }: { id: number }) {
             >{`Project ${id}`}
             </motion.h2>
             <motion.h6
-                className="mt-45 max-w-[450px]"
+                className="mt-45 max-w-[470px] pl-20"
                 initial={{ visibility: "hidden" }}
                 animate={{ visibility: "visible" }}
             >
@@ -44,41 +43,35 @@ function FramerImage({ id }: { id: number }) {
                     Link: <a href="https://example.com" className="text-blue-400 underline ml-1">Click this to visit</a>
                 </motion.small>
             </motion.h6>
-
-
         </section >
     )
 }
 
 export default function ProjectsParallax() {
-    const { scrollYProgress } = useScroll()
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001,
-    })
-
     return (
-        <div id="example">
-            {[1, 2, 3, 4, 5].map((image, index) => (
-                <FramerImage key={index} id={image} />
-            ))}
-            <motion.div className="progress" style={{ scaleX }} />
+        <div id="example" className="py-10">
+            <div className="snap-container">
+                {[1, 2, 3, 4, 5].map((image, index) => (
+                    <FramerImage key={index} id={image} />
+                ))}
+            </div>
             <StyleSheet />
         </div>
     )
 }
 
-
 function StyleSheet() {
     return (
         <style>{`
-        html {
+        .snap-container {
             scroll-snap-type: y mandatory;
+            height: 70vh;
+            overflow-y: scroll;
+             scrollbar-width: none; 
         }
 
         .img-container {
-            height: 100vh;
+            height: 70vh;
             scroll-snap-align: start;
             display: flex;
             justify-content: center;
@@ -89,7 +82,7 @@ function StyleSheet() {
         .img-container > div {
             width: 300px;
             height: 400px;
-            margin: 20px;
+            margin: 10px;
             background: #f5f5f5;
             overflow: hidden;
         }
@@ -123,16 +116,6 @@ function StyleSheet() {
             display: inline-block;
             top: calc(50% - 25px);
             left: calc(50% + 120px);
-        }
-
-        .progress {
-            position: fixed;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: #8df0cc;
-            bottom: 50px;
-            transform: scaleX(0);
         }
     `}</style>
     )
