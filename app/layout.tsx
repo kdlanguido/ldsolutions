@@ -3,6 +3,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import type { Metadata } from "next"
 import LoadingProvider from "@/components/LoadingProvider"
+import Footer from "@/components/Footer"
 
 export const metadata: Metadata = {
   title: "LD Solutions",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {children}
             </main>
           </LoadingProvider>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
