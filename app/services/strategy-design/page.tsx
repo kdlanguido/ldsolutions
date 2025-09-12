@@ -1,7 +1,13 @@
-import React from 'react'
-
-export default function page() {
+import React from "react";
+import StrategySection from "@/components/services/strategy-design/StrategySection";
+import PrinciplesSection from "@/components/services/strategy-design/PrinciplesSection";
+export default function StrategyDesignPage() {
     return (
-        <div>test</div>
-    )
+        <div className="min-h-screen bg-dark text-slate-900 antialiased">
+            <main>
+                <StrategySection />
+                <PrinciplesSection />
+            </main>
+        </div>
+    );
 }
