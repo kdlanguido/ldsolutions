@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
+import { CircleCheckIcon, CircleHelpIcon, CircleIcon, PhoneCallIcon } from "lucide-react"
 
 import {
     NavigationMenu,
@@ -75,7 +75,7 @@ export function Header() {
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className={underlineHover + "bg-transparent hover:bg-transparent focus:bg-transparent cursor-pointer"}>
-                            Home
+                            Insights
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ">
@@ -104,8 +104,9 @@ export function Header() {
                             </ul>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
+
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent cursor-pointer">Services</NavigationMenuTrigger>
+                        <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent cursor-pointer">Our Services</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                 {components.map((component) => (
@@ -120,25 +121,72 @@ export function Header() {
                             </ul>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
+
                     <NavigationMenuItem>
-                        <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
-                            <Link href="/docs">About Us</Link>
-                        </NavigationMenuLink>
+                        <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent cursor-pointer">About Us</NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                <ListItem
+                                    title="Who we are?"
+                                    href="/test"
+                                >
+                                    Testing
+                                </ListItem>
+                                <ListItem
+                                    title="Our story"
+                                    href="/test"
+                                >
+                                    Testing
+                                </ListItem>
+                            </ul>
+                        </NavigationMenuContent>
                     </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent cursor-pointer">Industries</NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                {components.map((component) => (
+                                    <ListItem
+                                        key={component.title}
+                                        title={component.title}
+                                        href={component.href}
+                                    >
+                                        {component.description}
+                                    </ListItem>
+                                ))}
+                            </ul>
+                        </NavigationMenuContent>
+                    </NavigationMenuItem>
+
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
                             <Link href="/docs">Our Projects</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
+                            <Link href="/docs">Client Stories</Link>
+                        </NavigationMenuLink>
+                    </NavigationMenuItem>
+
                 </NavigationMenuList>
             </NavigationMenu>
 
             <NavigationMenu viewport={false}>
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
-                            <Link href="/contact-us">Contact Us</Link>
+                        <NavigationMenuLink asChild>
+                            <Link
+                                href="/contact-us"
+                                className="flex items-center flex-row gap-2 font-semibold bg-transparent focus:bg-transparent cursor-pointer"
+                            >
+                                <PhoneCallIcon className="text-white" />
+                                Contact Us
+                            </Link>
                         </NavigationMenuLink>
+
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
