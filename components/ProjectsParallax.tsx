@@ -22,17 +22,30 @@ function Image({ id }: { id: number }) {
         <section className="img-container">
             <div ref={ref}>
                 <img
-                    src={`/photos/cityscape/${id}.jpg`}
+                    src={`/assets/mern.png`}
                     alt="A London skyscraper"
                 />
             </div>
             <motion.h2
-                // Hide until scroll progress is measured
                 initial={{ visibility: "hidden" }}
                 animate={{ visibility: "visible" }}
                 style={{ y }}
-            >{`#00${id}`}</motion.h2>
-        </section>
+            >{`Project ${id}`}
+            </motion.h2>
+            <motion.h6
+                className="mt-45 max-w-[450px]"
+                initial={{ visibility: "hidden" }}
+                animate={{ visibility: "visible" }}
+            >
+                A modern web application designed to deliver fast, scalable, and user-friendly digital experiences.
+                <br />
+                <motion.small>
+                    Link: <a href="https://example.com" className="text-blue-400 underline ml-1">Click this to visit</a>
+                </motion.small>
+            </motion.h6>
+
+
+        </section >
     )
 }
 
@@ -46,8 +59,8 @@ export default function ProjectsParallax() {
 
     return (
         <div id="example">
-            {[1, 2, 3, 4, 5].map((image) => (
-                <Image key={image} id={image} />
+            {[1, 2, 3, 4, 5].map((image, index) => (
+                <Image key={index} id={image} />
             ))}
             <motion.div className="progress" style={{ scaleX }} />
             <StyleSheet />
