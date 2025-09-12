@@ -68,9 +68,6 @@ export default function ProjectsParallax() {
     )
 }
 
-/**
- * ==============   Styles   ================
- */
 
 function StyleSheet() {
     return (
