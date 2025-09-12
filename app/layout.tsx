@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   title: "LD Solutions",
   description: "LD Solutions Philippines",
   icons: {
-    icon: "/favicon.png", // default
-    shortcut: "/favicon.png", // optional
-    apple: "/apple-touch-icon.png", // for iOS
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
 }
 
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           <LoadingProvider>
-            <main className="p-[30px] pt-[120px]"> {/* adjust to your header height */}
+            <main className="p-[30px] pt-[120px]">
               {children}
             </main>
           </LoadingProvider>

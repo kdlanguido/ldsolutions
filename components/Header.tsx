@@ -118,18 +118,13 @@ export function Header() {
                                             href="/insights/mern-stack"
                                             className="relative flex h-full w-full flex-col justify-end rounded-md overflow-hidden p-6 no-underline select-none focus:outline-none focus:shadow-md"
                                         >
-                                            {/* Background Image */}
                                             <Image
                                                 src="/assets/mern.png"
                                                 alt="MERN Stack"
                                                 fill
                                                 className="object-cover absolute inset-0 z-0"
                                             />
-
-                                            {/* Overlay */}
                                             <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 z-10"></div>
-
-                                            {/* Content */}
                                             <div className="mt-4 mb-2 text-lg font-medium text-white z-20">MERN Stack</div>
                                             <p className="text-sm leading-tight text-gray-200 z-20">
                                                 Build dynamic apps with MongoDB, Express, React, and Node.js.
