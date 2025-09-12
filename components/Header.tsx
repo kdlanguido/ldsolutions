@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon, PhoneCallIcon } from "lucide-react"
+import { PhoneCallIcon } from "lucide-react"
 
 import {
     NavigationMenu,
@@ -11,42 +11,80 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Image from "next/image"
 import { Geist_Mono } from "next/font/google"
 
-const components: { title: string; href: string; description: string }[] = [
+const serviceList: { title: string; href: string; description: string }[] = [
     {
         title: "Strategy and Design",
         href: "/services/strategy-design",
         description:
-            "A modal dialog that interrupts the user with important content and expects a response.",
+            "Crafting business strategies and design solutions that align with your goals.",
     },
     {
         title: "Architecture",
-        href: "/docs/primitives/hover-card",
+        href: "/services/architecture",
         description:
-            "For sighted users to preview content available behind a link.",
+            "Designing scalable, secure, and future-ready system architectures.",
     },
     {
         title: "Data Management",
-        href: "/docs/primitives/progress",
+        href: "/services/data-management",
         description:
-            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+            "Helping you organize, govern, and optimize data to unlock insights.",
     },
     {
         title: "Engineering",
-        href: "/docs/primitives/scroll-area",
-        description: "Visually or semantically separates content.",
+        href: "/services/engineering",
+        description:
+            "Building reliable, high-performance applications and platforms.",
     },
     {
-        title: "Cloud Modern Systems",
-        href: "/docs/primitives/tabs",
+        title: "Software As A Service",
+        href: "/services/saas",
         description:
-            "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+            "Delivering scalable, subscription-based software solutions through the cloud.",
     },
 ]
+
+const industriesList: { title: string; href: string; description: string }[] = [
+    {
+        title: "Real-Estate Systems",
+        href: "/services/strategy-design",
+        description: "Streamline property listings, sales, and management.",
+    },
+    {
+        title: "Book Keeping Systems",
+        href: "/services/architecture",
+        description: "Simplify financial tracking and reporting.",
+    },
+    {
+        title: "Information Systems",
+        href: "/services/data-management",
+        description: "Organize and manage data effectively.",
+    },
+    {
+        title: "Management Systems",
+        href: "/services/engineering",
+        description: "Optimize workflows and boost efficiency.",
+    },
+    {
+        title: "Appointment Systems",
+        href: "/services/saas",
+        description: "Schedule and manage bookings with ease.",
+    },
+    {
+        title: "E-Learning Management",
+        href: "/services/saas",
+        description: "Deliver and track online learning programs.",
+    },
+    {
+        title: "Business Profiles",
+        href: "/services/saas",
+        description: "Showcase company details and services online.",
+    },
+];
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
@@ -61,10 +99,10 @@ const underlineHover =
 export function Header() {
     return (
         <div className="flex justify-between p-6 px-12 items-center">
-            <div className="flex items-center">
+            <a className="flex items-center" href="/">
                 <Image className="h-auto" src="/assets/ldlogo.png" alt="" width={50} height={150} />
                 <h1 className={`${geistMono.className} text-[18px] text-white `}>LD Solutions</h1>
-            </div>
+            </a>
             <NavigationMenu viewport={false}>
                 <NavigationMenuList>
                     <NavigationMenuItem>
@@ -76,26 +114,43 @@ export function Header() {
                                 <li className="row-span-3">
                                     <NavigationMenuLink asChild>
                                         <a
-                                            href="/"
-                                            className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline select-none focus:outline-none focus:shadow-md"
+                                            href="/insights/mern-stack"
+                                            className="relative flex h-full w-full flex-col justify-end rounded-md overflow-hidden p-6 no-underline select-none focus:outline-none focus:shadow-md"
                                         >
-                                            <div className="mt-4 mb-2 text-lg font-medium">shadcn/ui</div>
-                                            <p className="text-muted-foreground text-sm leading-tight">
-                                                Beautifully designed components built with Tailwind CSS.
+                                            {/* Background Image */}
+                                            <Image
+                                                src="/assets/mern.png"
+                                                alt="MERN Stack"
+                                                fill
+                                                className="object-cover absolute inset-0 z-0"
+                                            />
+
+                                            {/* Overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 z-10"></div>
+
+                                            {/* Content */}
+                                            <div className="mt-4 mb-2 text-lg font-medium text-white z-20">MERN Stack</div>
+                                            <p className="text-sm leading-tight text-gray-200 z-20">
+                                                Build dynamic apps with MongoDB, Express, React, and Node.js.
                                             </p>
                                         </a>
                                     </NavigationMenuLink>
                                 </li>
-                                <ListItem href="/docs" title="Introduction">
-                                    Re-usable components built using Radix UI and Tailwind CSS.
+
+                                <ListItem href="/insights/methodologies" title="Methodologies">
+                                    Agile approaches for efficient project delivery.
                                 </ListItem>
-                                <ListItem href="/docs/installation" title="Installation">
-                                    How to install dependencies and structure your app.
+
+                                <ListItem href="/insights/nextjs" title="Next JS">
+                                    Framework for fast, scalable web applications.
                                 </ListItem>
-                                <ListItem href="/docs/primitives/typography" title="Typography">
-                                    Styles for headings, paragraphs, lists...etc
+
+                                <ListItem href="/insights/modern-software" title="Modern Software Solutions">
+                                    Tools and practices for building future-ready systems.
                                 </ListItem>
                             </ul>
+
+
                         </NavigationMenuContent>
                     </NavigationMenuItem>
 
@@ -103,13 +158,13 @@ export function Header() {
                         <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent cursor-pointer">Our Services</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                {components.map((component) => (
+                                {serviceList.map((service) => (
                                     <ListItem
-                                        key={component.title}
-                                        title={component.title}
-                                        href={component.href}
+                                        key={service.title}
+                                        title={service.title}
+                                        href={service.href}
                                     >
-                                        {component.description}
+                                        {service.description}
                                     </ListItem>
                                 ))}
                             </ul>
@@ -122,15 +177,15 @@ export function Header() {
                             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                 <ListItem
                                     title="Who we are?"
-                                    href="/test"
+                                    href="/about-us/who-we-are"
                                 >
-                                    Testing
+                                    Learn about our identity, values, and the principles that guide our work.
                                 </ListItem>
                                 <ListItem
                                     title="Our story"
-                                    href="/test"
+                                    href="/about-us/our-story"
                                 >
-                                    Testing
+                                    Discover our journey, milestones, and the vision that drives us forward.
                                 </ListItem>
                             </ul>
                         </NavigationMenuContent>
@@ -140,13 +195,13 @@ export function Header() {
                         <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent cursor-pointer">Industries</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                {components.map((component) => (
+                                {industriesList.map((industry) => (
                                     <ListItem
-                                        key={component.title}
-                                        title={component.title}
-                                        href={component.href}
+                                        key={industry.title}
+                                        title={industry.title}
+                                        href={industry.href}
                                     >
-                                        {component.description}
+                                        {industry.description}
                                     </ListItem>
                                 ))}
                             </ul>
@@ -155,13 +210,13 @@ export function Header() {
 
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
-                            <Link href="/docs">Our Projects</Link>
+                            <Link href="/projects">Our Projects</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
-                            <Link href="/docs">Client Stories</Link>
+                            <Link href="/clients">Client Stories</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
 
