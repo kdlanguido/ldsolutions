@@ -1,0 +1,38 @@
+[
+    {
+        "name": "King Dranreb Languido",
+        "id": "O-6066",
+        "imageUrl": "/assets/profile/kd.jfif",
+        "parentId": "",
+        "positionName": "CEO / Senior Software Engineer",
+        "linkedIn": "www.linkedin.com/in/king-dranreb-languido-156b29202",
+        "size": "",
+        "phone": "09171077268"
+    },
+    {
+        "name": "Jay Aubrey Languido",
+        "imageUrl": "/assets/profile/jay.jfif",
+        "area": "Corporate",
+        "office": "CEO office",
+        "tags": "Ceo,tag1, tag2",
+        "positionName": "CTO / Senior Software Engineer",
+        "id": "O-6067",
+        "parentId": "O-6066",
+        "linkedIn": "www.linkedin.com/in/jay-aubrey-languido-5b1763195/",
+        "size": "",
+        "phone": "09171077268"
+    },
+    {
+        "name": "Lloyd Sydlik Languido",
+        "imageUrl": "/assets/profile/lloyd.jfif",
+        "area": "Corporate",
+        "office": "CEO office",
+        "tags": "Ceo,tag1, tag2",
+        "positionName": "Software Engineer",
+        "id": "O-6068",
+        "parentId": "O-6066",
+        "linkedIn": "www.linkedin.com/in/lloydnim/",
+        "size": "",
+        "phone": "09326073237"
+    }
+]
