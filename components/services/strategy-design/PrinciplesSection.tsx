@@ -1,28 +1,27 @@
+import React from 'react';
 export default function PrinciplesSection() {
     return (
-        <section id="dare" className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <section className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-white">
                 <article className="lg:col-span-2">
-                    <h2 className="text-2xl font-bold">Uncovering, owning and solving business problems</h2>
-                    <p className="mt-4 text-slate-700">Our multi-disciplinary team works collaboratively with you to uncover key themes across your organisation and client base. We combine evidence-led research with product and brand thinking to design resilient, future-proof solutions.</p>
-
+                    <h3 className="text-2xl font-bold text-[#1e00ff]">Uncovering, owning and solving business problems</h3>
+                    <p className="mt-4 text-white">Our multi-disciplinary team works collaboratively with you to uncover key themes across your organisation and client base. We combine evidence-led research with product and brand thinking to design resilient, future-proof solutions.</p>
 
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="p-6 border rounded-lg">
                             <h3 className="font-semibold">Discovery</h3>
-                            <p className="mt-2 text-sm text-slate-600">We solve your challenges by listening and adapting to your organisation, working with you to draw a picture of your business needs.</p>
-                            <a className="mt-4 inline-block text-indigo-600 text-sm font-medium" href="#">Why a discovery?</a>
+                            <p className="mt-2 text-sm">We solve your challenges by listening and adapting to your organisation, working with you to draw a picture of your business needs.</p>
+                            <a className="mt-4 inline-block text-[#1e00ff] text-sm font-medium" href="#">Why a discovery?</a>
                         </div>
-
 
                         <div className="p-6 border rounded-lg">
                             <h3 className="font-semibold">Designing optimised business processes</h3>
-                            <p className="mt-2 text-sm text-slate-600">We accelerate your proposition with a mixture of brand, product design, strategy and market thinking to turn ideas into reality.</p>
+                            <p className="mt-2 text-sm ">We accelerate your proposition with a mixture of brand, product design, strategy and market thinking to turn ideas into reality.</p>
                         </div>
                     </div>
 
 
-                    <blockquote className="mt-8 p-6 border-l-4 border-indigo-600 bg-indigo-50 rounded-md">
+                    <blockquote className="mt-8 p-6 border-l-4 border-[#1e00ff] bg-indigo-50 rounded-md">
                         <p className="text-slate-800 italic">"Having a true expert by your side at the planning stage is critical but a partner’s real worth is tested when it comes to execution. 6point6 has blasted through with flying colours."</p>
                         <footer className="mt-3 text-sm text-slate-600">Mark Heath — Founder, Open Borders Direct</footer>
                     </blockquote>

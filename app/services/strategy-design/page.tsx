@@ -4,10 +4,8 @@ import PrinciplesSection from "@/components/services/strategy-design/PrinciplesS
 export default function StrategyDesignPage() {
     return (
         <div className="min-h-screen bg-dark text-slate-900 antialiased">
-            <main>
-                <StrategySection />
-                <PrinciplesSection />
-            </main>
+            <StrategySection />
+            <PrinciplesSection />
         </div>
     );
 }
