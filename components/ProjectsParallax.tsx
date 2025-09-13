@@ -65,13 +65,13 @@ function StyleSheet() {
         <style>{`
         .snap-container {
             scroll-snap-type: y mandatory;
-            height: 70vh;
+            height: 75vh;
             overflow-y: scroll;
              scrollbar-width: none; 
         }
 
         .img-container {
-            height: 70vh;
+            height: 75vh;
             scroll-snap-align: start;
             display: flex;
             justify-content: center;
