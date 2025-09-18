@@ -7,25 +7,22 @@ export default function Footer() {
                 <div>
                     <h2 className="text-xl font-bold">LDSolutions &copy;</h2>
                     <p className="mt-2 text-sm text-gray-300">
-                        Your trusted partner in finding the perfect property.
-                        We connect people with their dream homes and investment opportunities.
+                        Your trusted partner in technology and innovation. We empower businesses with scalable and efficient solutions — helping you build, grow, and succeed in the digital era.
                     </p>
                 </div>
                 <div>
                     <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
                     <ul className="space-y-2 text-sm text-gray-300">
-                        <li><a href="#" className="hover:text-white">Home</a></li>
-                        <li><a href="#" className="hover:text-white">About Us</a></li>
-                        <li><a href="#" className="hover:text-white">Properties</a></li>
-                        <li><a href="#" className="hover:text-white">Contact</a></li>
+                        <li><a href="/" className="hover:text-white">Home</a></li>
+                        <li><a href="/contact-us" className="hover:text-white">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 className="text-lg font-semibold mb-3">Get in Touch</h3>
                     <ul className="space-y-2 text-sm text-gray-300">
-                        <li>Email: <a href="mailto:info@realstate.co" className="hover:text-white">info@realstate.co</a></li>
-                        <li>Phone: <a href="tel:+1234567890" className="hover:text-white">+1 234 567 890</a></li>
-                        <li>Address: 123 Main Street, City, Country</li>
+                        <li>Email: <a href="mailto:sales@ldsolutionsph.com" className="hover:text-white">sales@ldsolutionsph.com</a></li>
+                        <li>Phone: <a href="tel:+639605675579" className="hover:text-white">+639 605 675 579</a></li>
+                        <li>Address: Pasig City, Philippines</li>
                     </ul>
                 </div>
             </div>
