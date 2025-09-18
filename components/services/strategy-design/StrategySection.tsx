@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 export default function StrategySection() {
     return (
         <section className="relative text-white mt-7">
@@ -33,7 +34,7 @@ export default function StrategySection() {
                     </div>
                 </div>
                 <div className="w-full h-full">
-                    <img
+                    <Image
                         src="/assets/services/img-1.png"
                         alt="Strategy illustration"
                         className="w-full"
