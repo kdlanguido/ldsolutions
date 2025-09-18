@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/navigation-menu"
 import Image from "next/image"
 import { Geist_Mono } from "next/font/google"
-import Loader from "./Loader"
 
 const serviceList: { title: string; href: string; description: string }[] = [
     {
@@ -100,10 +99,10 @@ const underlineHover =
 export function Header() {
     return (
         <div className="fixed top-0 left-0 right-0 z-[9999] flex justify-between p-6 px-12 items-center bg-black/80 backdrop-blur-md">
-            <a className="flex items-center" href="/">
+            <Link className="flex items-center" href="/">
                 <Image className="h-auto" src="/assets/ldlogo.png" alt="" width={50} height={150} />
                 <h1 className={`${geistMono.className} text-[18px] text-white `}>LD Solutions</h1>
-            </a>
+            </Link>
             <NavigationMenu viewport={false}>
                 <NavigationMenuList>
                     <NavigationMenuItem>

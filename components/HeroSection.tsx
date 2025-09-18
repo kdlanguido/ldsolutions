@@ -1,8 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Play, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 function HeroSection() {
-  const VIDEO_SRC = "https://www.w3schools.com/html/mov_bbb.mp4";
   return (
     <div className="flex min-h-screen w-full flex-col lg:flex-row text-white font-inter">
       <div className="flex-1 p-8 md:p-16 flex flex-col justify-center space-y-6 lg:w-1/2 h-full">

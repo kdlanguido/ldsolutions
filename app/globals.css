@@ -43,6 +43,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -76,6 +77,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --ripple-size: 700px;
+  --ripple-color: rgba(59, 130, 246, 0.12);
+  --ripple-color-2: rgba(99, 102, 241, 0.08);
+  --ripple-duration: 5s;
 }
 
 .dark {
@@ -116,7 +121,15 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+
+@media (max-width: 640px) {
+  :root {
+    --ripple-size: 420px;
   }
 }
