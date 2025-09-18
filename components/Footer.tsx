@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
     return (
         <footer className="relative bg-gradient-to-b from-transparent via-[#003B5F]/60 to-[#001726] text-white pb-8 pt-10 px-6 overflow-hidden">
@@ -13,15 +15,15 @@ export default function Footer() {
                 <div>
                     <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
                     <ul className="space-y-2 text-sm text-gray-300">
-                        <li><a href="/" className="hover:text-white">Home</a></li>
-                        <li><a href="/contact-us" className="hover:text-white">Contact Us</a></li>
+                        <li><Link href="/" className="hover:text-white">Home</Link></li>
+                        <li><Link href="/contact-us" className="hover:text-white">Contact Us</Link></li>
                     </ul>
                 </div>
                 <div>
                     <h3 className="text-lg font-semibold mb-3">Get in Touch</h3>
                     <ul className="space-y-2 text-sm text-gray-300">
-                        <li>Email: <a href="mailto:sales@ldsolutionsph.com" className="hover:text-white">sales@ldsolutionsph.com</a></li>
-                        <li>Phone: <a href="tel:+639605675579" className="hover:text-white">+639 605 675 579</a></li>
+                        <li>Email: <Link href="mailto:sales@ldsolutionsph.com" className="hover:text-white">sales@ldsolutionsph.com</Link></li>
+                        <li>Phone: <Link href="tel:+639605675579" className="hover:text-white">+639 605 675 579</Link></li>
                         <li>Address: Pasig City, Philippines</li>
                     </ul>
                 </div>
