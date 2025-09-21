@@ -2,16 +2,16 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="relative bg-gradient-to-b from-transparent via-[#003B5F]/60 to-[#001726] text-white pb-8 pt-10 px-6 overflow-hidden">
+        <footer className="relative bg-gradient-to-b from-transparent via-[#003B5F]/60 to-[#001726] text-white pb-8 pt-10 p-8 overflow-hidden w-full">
             <div className="absolute inset-0 opacity-40 pointer-events-none bg-[url('/assets/wave.svg')] bg-repeat-x bg-bottom"></div>
-
-            <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h2 className="text-xl font-bold">LDSolutions &copy;</h2>
                     <p className="mt-2 text-sm text-gray-300">
                         Your trusted partner in technology and innovation. We empower businesses with scalable and efficient solutions — helping you build, grow, and succeed in the digital era.
                     </p>
                 </div>
+
                 <div>
                     <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
                     <ul className="space-y-2 text-sm text-gray-300">
@@ -19,6 +19,7 @@ export default function Footer() {
                         <li><Link href="/contact-us" className="hover:text-white">Contact Us</Link></li>
                     </ul>
                 </div>
+
                 <div>
                     <h3 className="text-lg font-semibold mb-3">Get in Touch</h3>
                     <ul className="space-y-2 text-sm text-gray-300">
