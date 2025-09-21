@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { Suspense } from "react";
+import React from "react";
 import BackgroundRipple from "@/components/BackgroundRipple/BackgroundRipple";
 import DataManagementCarousel from "@/components/DataManagementCarousel";
 
