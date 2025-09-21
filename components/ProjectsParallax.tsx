@@ -4,9 +4,9 @@ import {
     motion,
     MotionValue,
     useScroll,
-    useSpring,
     useTransform,
 } from "framer-motion"
+import Image from "next/image"
 
 import { useRef } from "react"
 
@@ -21,7 +21,7 @@ function FramerImage({ id }: { id: number }) {
     return (
         <section className="img-container">
             <div ref={ref}>
-                <img
+                <Image
                     src={`/assets/mern.png`}
                     alt="A London skyscraper"
                 />
