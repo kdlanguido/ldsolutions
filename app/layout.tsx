@@ -24,9 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Header />
             <div className="flex-1">
               <LoadingProvider>
-                  <main className="p-[30px] pt-[120px] lg:p-[0px] lg:pt-[120px]">
-                    {children}
-                  </main>
+                <main className="pt-0 lg:p-[0px] lg:pt-[120px]">
+                  {children}
+                </main>
               </LoadingProvider>
             </div>
             <Footer />
