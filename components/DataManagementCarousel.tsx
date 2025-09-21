@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 
 import { Card, CardContent } from "@/components/ui/card"
@@ -10,7 +12,7 @@ import {
 } from "@/components/ui/carousel"
 import Image from "next/image"
 
-export function DataManagementCarousel() {
+export default function DataManagementCarousel() {
 
     const imageList = [
         {
