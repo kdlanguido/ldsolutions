@@ -36,7 +36,7 @@ const UnderConstructionPage = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [])
 
   return (
     <>
@@ -60,15 +60,14 @@ const UnderConstructionPage = () => {
           }
         `}</style>
 
-        <div className="text-center flex flex-col items-center">
+        <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-bold neon-text mb-4">
-            <span className="text-blue-400">Page </span>
-            <span className="text-purple-400">Under Construction</span>
+            <span className="text-blue-400">Project</span>
+            <span className="text-purple-400">Lazy Devs</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl">
             Have some Coffee first, We are trying to do this as fast as we can.
             <br />
-            {/* <span className="text-purple-400 neon-text">We are lazy tho</span> */}
           </p>
 
           <div className="flex justify-center items-center space-x-4 mb-8">
@@ -95,6 +94,7 @@ const UnderConstructionPage = () => {
       </div>
     </>
   );
-};
+
+}
 
 export default UnderConstructionPage;
