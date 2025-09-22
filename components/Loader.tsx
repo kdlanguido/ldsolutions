@@ -29,9 +29,6 @@ function Loader() {
     )
 }
 
-/**
- * ==============   Styles   ================
- */
 function StyleSheet() {
     return (
         <style>
