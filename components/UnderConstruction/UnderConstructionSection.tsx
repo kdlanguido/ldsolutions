@@ -68,7 +68,6 @@ const UnderConstructionPage = () => {
           <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl">
             Have some Coffee first, We are trying to do this as fast as we can.
             <br />
-            {/* <span className="text-purple-400 neon-text">We are lazy tho</span> */}
           </p>
 
           <div className="flex justify-center items-center space-x-4 mb-8">
