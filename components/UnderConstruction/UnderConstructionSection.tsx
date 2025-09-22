@@ -36,7 +36,7 @@ const UnderConstructionPage = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [])
 
   return (
     <>
@@ -94,6 +94,7 @@ const UnderConstructionPage = () => {
       </div>
     </>
   );
-};
+
+}
 
 export default UnderConstructionPage;
