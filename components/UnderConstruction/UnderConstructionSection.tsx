@@ -61,39 +61,35 @@ const UnderConstructionPage = () => {
         `}</style>
 
         <div className="text-center flex flex-col items-center">
-          <div className="text-center flex flex-col items-center">
-            <h1 className="text-5xl md:text-7xl font-bold neon-text mb-4">
-              <span className="text-blue-400">Page </span>
-              <span className="text-purple-400">Under Construction</span>
-              <span className="text-blue-400">Page </span>
-              <span className="text-purple-400">Under Construction</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl">
-              Have some Coffee first, We are trying to do this as fast as we can.
-              <br />
-            </p>
+          <h1 className="text-5xl md:text-7xl font-bold neon-text mb-4">
+            <span className="text-blue-400">Page </span>
+            <span className="text-purple-400">Under Construction</span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl">
+            Have some Coffee first, We are trying to do this as fast as we can.
+            <br />
+          </p>
 
-            <div className="flex justify-center items-center space-x-4 mb-8">
-              {Object.entries(timeLeft).map(([unit, value]) => (
-                <div key={unit} className="flex flex-col items-center">
-                  <div className="text-3xl md:text-5xl font-extrabold text-blue-400 p-2 border-2 border-blue-400 rounded-lg">
-                    {String(value).padStart(2, "0")}
-                  </div>
-                  <span className="text-xs md:text-sm text-gray-500 mt-1 uppercase">
-                    {unit}
-                  </span>
+          <div className="flex justify-center items-center space-x-4 mb-8">
+            {Object.entries(timeLeft).map(([unit, value]) => (
+              <div key={unit} className="flex flex-col items-center">
+                <div className="text-3xl md:text-5xl font-extrabold text-blue-400 p-2 border-2 border-blue-400 rounded-lg">
+                  {String(value).padStart(2, "0")}
                 </div>
-              ))}
-            </div>
-
-            <div className="bg-gray-800 rounded-full h-2 w-64 md:w-96 mb-8 overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 h-full animate-pulse"></div>
-            </div>
-
-            <p className="text-sm md:text-base text-gray-500">
-              For updates, follow us on our social channels or check back soon.
-            </p>
+                <span className="text-xs md:text-sm text-gray-500 mt-1 uppercase">
+                  {unit}
+                </span>
+              </div>
+            ))}
           </div>
+
+          <div className="bg-gray-800 rounded-full h-2 w-64 md:w-96 mb-8 overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 h-full animate-pulse"></div>
+          </div>
+
+          <p className="text-sm md:text-base text-gray-500">
+            For updates, follow us on our social channels or check back soon.
+          </p>
         </div>
       </div>
     </>
