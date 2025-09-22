@@ -2,6 +2,7 @@
 import React, {
   CSSProperties,
   PropsWithChildren,
+  useCallback,
   useEffect,
   useId,
   useLayoutEffect,
@@ -48,7 +49,7 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
   const rootRef = useRef<HTMLDivElement | null>(null);
   const strokeRef = useRef<HTMLDivElement | null>(null);
 
-  const updateAnim = () => {
+  const updateAnim = useCallback(() => {
     const svg = svgRef.current;
     const host = rootRef.current;
     if (!svg || !host) return;
@@ -104,7 +105,7 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
     }
 
     requestAnimationFrame(() => {
-      [...dyAnims, ...dxAnims].forEach((a: any) => {
+      [...dyAnims, ...dxAnims].forEach((a: SVGAnimateElement) => {
         if (typeof a.beginElement === "function") {
           try {
             a.beginElement();
@@ -112,11 +113,19 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
         }
       });
     });
-  };
+  }, [filterId, speed, chaos]); // Include dependencies of updateAnim here
 
   useEffect(() => {
     updateAnim();
-  }, [speed, chaos]);
+  }, [updateAnim]); // Now updateAnim is a stable function, so it's a valid dependency
+
+  useLayoutEffect(() => {
+    if (!rootRef.current) return;
+    const ro = new ResizeObserver(() => updateAnim());
+    ro.observe(rootRef.current);
+    updateAnim();
+    return () => ro.disconnect();
+  }, [updateAnim]); // Add updateAnim as a dependency here
 
   useLayoutEffect(() => {
     if (!rootRef.current) return;
