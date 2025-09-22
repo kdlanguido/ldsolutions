@@ -108,7 +108,7 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
         if (typeof a.beginElement === "function") {
           try {
             a.beginElement();
-          } catch {}
+          } catch { }
         }
       });
     });

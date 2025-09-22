@@ -47,35 +47,26 @@ export const OrgChartComponent: React.FC<OrgChartComponentProps> = ({
           const node = d as OrgChartRenderedNode;
 
           return `
-    <div style="padding-top:30px;background-color:none;margin-left:1px;height:${
-      node.height
-    }px;border-radius:20px;overflow:visible;">
-      <a href="https://${
-        node.data.linkedIn
-      }" target="_blank" rel="noopener noreferrer">
-        <div style="height:${
-          node.height - 32
-        }px;padding-top:0px;background-color:white;border:1px solid lightgray;border-radius:20px;">
-          <img src="${
-            node.data.imageUrl
-          }" style="margin-top:-30px;margin-left:${
-            node.width / 2 - 73
-          }px;border-radius:100px;width:150px;height:150px;" />
-          <div style="margin-top:-30px;background-color:#003B5F;height:10px;width:${
-            node.width - 2
-          }px;border-radius:1px"></div>
+    <div style="padding-top:30px;background-color:none;margin-left:1px;height:${node.height
+            }px;border-radius:20px;overflow:visible;">
+      <a href="https://${node.data.linkedIn
+            }" target="_blank" rel="noopener noreferrer">
+        <div style="height:${node.height - 32
+            }px;padding-top:0px;background-color:white;border:1px solid lightgray;border-radius:20px;">
+          <img src="${node.data.imageUrl
+            }" style="margin-top:-30px;margin-left:${node.width / 2 - 73
+            }px;border-radius:100px;width:150px;height:150px;" />
+          <div style="margin-top:-30px;background-color:#003B5F;height:10px;width:${node.width - 2
+            }px;border-radius:1px"></div>
           <div style="padding:20px; padding-top:40px;text-align:center">
-            <div style="color:#003B5F;font-size:18px;font-weight:bold">${
-              node.data.name
+            <div style="color:#003B5F;font-size:18px;font-weight:bold">${node.data.name
             }</div>
-            <div style="color:#555555;font-size:16px;margin-top:4px">${
-              node.data.positionName
+            <div style="color:#555555;font-size:16px;margin-top:4px">${node.data.positionName
             }</div>
           </div> 
           <div style="padding:20px; padding-top:5px;text-align:center">
             <div style="color:#003B5F;font-size:16px;font-weight:bold">Mobile Number</div>
-            <div style="color:#555555;font-size:16px;margin-top:4px">${
-              node.data.phone
+            <div style="color:#555555;font-size:16px;margin-top:4px">${node.data.phone
             }</div>
           </div> 
         </div>    
@@ -96,3 +87,5 @@ export const OrgChartComponent: React.FC<OrgChartComponentProps> = ({
     </div>
   );
 };
+
+export default OrgChartComponent;
