@@ -62,8 +62,8 @@ const UnderConstructionPage = () => {
 
         <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-bold neon-text mb-4">
-            <span className="text-blue-400">Project</span>
-            <span className="text-purple-400">Lazy Devs</span>
+            <span className="text-blue-400">Page</span>
+            <span className="text-purple-400">Under Construction</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl">
             Have some Coffee first, We are trying to do this as fast as we can.
