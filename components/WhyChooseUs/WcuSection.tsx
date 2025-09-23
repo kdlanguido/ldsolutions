@@ -1,13 +1,12 @@
-"use client";
 import React from "react";
-import WwdCards from "./WwdCards";
 import SplitText from "../SplitText";
+import WcuBody from "./WcuBody";
 
-function WwdSection() {
+function WcuSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-4 sm:px-8 py-12">
+    <section className="px-4 sm:px-8 py-12">
       <SplitText
-        text="WHAT WE DO!"
+        text="WHY CHOOSE US?"
         className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8"
         delay={100}
         duration={0.6}
@@ -19,9 +18,9 @@ function WwdSection() {
         rootMargin="-100px"
         textAlign="center"
       />
-      <WwdCards />
+      <WcuBody />
     </section>
   );
 }
 
-export default WwdSection;
+export default WcuSection;
