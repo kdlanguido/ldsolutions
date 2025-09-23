@@ -1,0 +1,62 @@
+<div className="mt-8 grid grid-cols-1 md:grid-cols-1 gap-6">
+    <div className="relative flex flex-col md:flex-row border rounded-lg overflow-hidden">
+        <div className="p-6 md:w-1/2 relative z-10 bg-slate-100">
+            <h3 className="font-semibold">Discovery</h3>
+            <p className="mt-2 text-sm">
+                We solve your challenges by listening and adapting to your organisation, working with you to draw a
+                picture of your business needs.
+            </p>
+            <a className="mt-4 inline-block text-[#1e00ff] text-sm font-medium" href="#">
+                Why a discovery?
+            </a>
+        </div>
+
+        <div className="md:w-1/2 bg-cover bg-center md:block" style={{
+            backgroundImage: "url('/assets/services/img-2.png')" }}></div>
+    </div>
+    <div className="relative flex flex-col md:flex-row border rounded-lg overflow-hidden">
+        <div className="p-6 md:w-1/2 relative z-10 bg-slate-100">
+            <h3 className="font-semibold">Discovery</h3>
+            <p className="mt-2 text-sm">
+                We solve your challenges by listening and adapting to your organisation, working with you to draw a
+                picture of your business needs.
+            </p>
+            <a className="mt-4 inline-block text-[#1e00ff] text-sm font-medium" href="#">
+                View more
+            </a>
+        </div>
+
+        <div className="md:w-1/2 bg-cover bg-center md:block" style={{
+            backgroundImage: "url('/assets/services/img-3.png')" }}></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div className="relative flex flex-col md:flex-row border rounded-lg overflow-hidden">
+        <div className="p-5 md:w-1/2 relative z-10 bg-slate-100">
+            <h3 className="font-semibold">Discovery</h3>
+            <p className="mt-2 text-sm">
+                We solve your challenges by listening and adapting to your organisation, working with you to draw a
+                picture of your business needs.
+            </p>
+            <a className="mt-4 inline-block text-[#1e00ff] text-sm font-medium" href="#">
+                Why a discovery?
+            </a>
+        </div>
+
+        <div className="md:w-1/2 bg-cover bg-center md:block" style={{
+            backgroundImage: "url('/assets/services/img-2.png')" }}></div>
+    </div>
+
+    <div className="p-6 border rounded-lg border-[#1e00ff]">
+        <h3 className="font-semibold">Designing optimised business processes</h3>
+        <p className="mt-2 text-sm ">We accelerate your proposition with a mixture of brand, product design, strategy
+            and market thinking to turn ideas into reality.</p>
+    </div>
+</div>
