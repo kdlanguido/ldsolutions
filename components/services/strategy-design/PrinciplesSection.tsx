@@ -1,120 +1,116 @@
-import React from 'react';
-export default function PrinciplesSection() {
-    return (  
-        <section className="bg-white mx-auto max-w-7xl px-6 lg:px-8 py-25">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 px-6 lg:px-7 text-black">
-                <article className="lg:col-span-2">
-                    <h3 className="text-2xl font-bold text-[#1e00ff]">Uncovering, owning and solving business problems</h3>
-                    <p className="mt-4">Our multi-disciplinary team works collaboratively with you to uncover key themes across your organisation and client base. We combine evidence-led research with product and brand thinking to design resilient, future-proof solutions.</p>
+import React from "react";
 
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-1 gap-6">
-                        <div className="relative flex flex-col md:flex-row border rounded-lg overflow-hidden">
-                            <div className="p-6 md:w-1/2 relative z-10 border-l-4 border-[#1e00ff] bg-indigo-50 rounded-md">
-                                <h3 className="font-semibold">Discovery</h3>
-                                <p className="mt-2 text-sm">
-                                    We solve your challenges by listening and adapting to your organisation, working with you to draw a
-                                    picture of your business needs.
+export default function ServicesSection() {
+    return (
+        <section className="bg-[#ffffff] text-black py-30">
+            <div className="max-w-7xl mx-auto px-6 lg:px-12">
+                <div className="text-center">
+                    <h2 className="text-3xl font-bold">Strategy and design</h2>
+                    <p className="mt-3 text-black max-w-2xl mx-auto">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve
+                    </p>
+                </div>
+
+                <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 text-[#E9EAEC]">
+                    <div className="lg:col-span-2 flex flex-col gap-4">
+                        <div className="bg-[#0B0C0C] border rounded-lg overflow-hidden flex flex-col md:flex-row">
+                            <div
+                                className="h-50 md:w-3/2 bg-cover bg-center"
+                                style={{ backgroundImage: "url('/assets/services/img-3.png')" }}
+                            ></div>
+                            <div className="p-5 flex flex-col justify-center">
+                                <h3 className="font-semibold text-lg">Uncovering, owning and solving business problems</h3>
+                                <p className="mt-2 text-sm text-gray-400">
+                                    We are passionate about solving business problems through carefully considered strategy and design. It’s all about adding value for your clients by making sure everything works now and in the future.
                                 </p>
-                                <a className="mt-4 inline-block text-[#1e00ff] text-sm font-medium" href="#">
-                                    Why a discovery?
-                                </a>
                             </div>
-
-                            <div className="md:w-1/2 bg-cover bg-center md:block" style={{
-                                backgroundImage: "url('/assets/services/img-2.png')"
-                            }}></div>
                         </div>
 
-                        <div className="relative flex flex-col md:flex-row border rounded-lg overflow-hidden">
-                            <div className="p-6 md:w-1/2 relative z-10 border-l-4 border-[#1e00ff] bg-indigo-50 rounded-md">
-                                <h3 className="font-semibold">Designing optimised business processes</h3>
-                                <p className="mt-2 text-sm">
-                                    We solve your challenges by listening and adapting to your organisation, working with you to draw a
-                                    picture of your business needs.
+                        <div className="bg-[#111111] border border-gray-800 rounded-lg overflow-hidden flex flex-col md:flex-row">
+                           
+                            <div className="p-5 flex flex-col justify-center">
+                                <h3 className="font-semibold text-lg">System Integration</h3>
+                                <p className="mt-2 text-sm text-gray-400">
+                                    We connect systems and workflows to help your business run smoothly.
                                 </p>
-                                <a className="mt-4 inline-block text-[#1e00ff] text-sm font-medium" href="#">
-                                    View more
-                                </a>
+                                <button className="mt-4 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 transition">
+                                    Learn more
+                                </button>
                             </div>
+                             <div
+                                className="h-36 md:w-1/3 bg-cover bg-center"
+                                style={{ backgroundImage: "url('/assets/services/system.png')" }}
+                            ></div>
+                        </div>
 
-                            <div className="md:w-1/2 bg-cover bg-center md:block" style={{
-                                backgroundImage: "url('/assets/services/img-3.png')"
-                            }}></div>
+                        <div className="bg-[#111111] border border-gray-800 rounded-lg overflow-hidden flex flex-col md:flex-row">
+                            <div
+                                className="h-36 md:w-1/3 bg-cover bg-center"
+                                style={{ backgroundImage: "url('/assets/services/seo.png')" }}
+                            ></div>
+                            <div className="p-5 flex flex-col justify-center">
+                                <h3 className="font-semibold text-lg">SEO Optimization</h3>
+                                <p className="mt-2 text-sm text-gray-400">
+                                    Boost your website’s visibility on search engines and attract more customers.
+                                </p>
+                                <button className="mt-4 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 transition">
+                                    Learn more
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="bg-[#111111] border border-gray-800 rounded-lg overflow-hidden flex flex-col md:flex-row">
+                            <div
+                                className="h-36 md:w-1/3 bg-cover bg-center"
+                                style={{ backgroundImage: "url('/assets/services/maintenance.png')" }}
+                            ></div>
+                            <div className="p-5 flex flex-col justify-center">
+                                <h3 className="font-semibold text-lg">Web Maintenance</h3>
+                                <p className="mt-2 text-sm text-gray-400">
+                                    Keep your website up-to-date and secure so it keeps driving value for your business.
+                                </p>
+                                <button className="mt-4 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 transition">
+                                    Learn more
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </article>
 
-                {/* <aside className="border rounded-lg bg-slate-100 overflow-hidden flex flex-col">
-                    <div className="w-full h-48 md:h-50 bg-cover bg-center"
-                        style={{ backgroundImage: "url('/assets/services/img-3.png')" }}>
+                    <div className="flex flex-col gap-6">
+                        <div className="bg-[#111111] border border-gray-800 rounded-lg overflow-hidden flex flex-col">
+                            <div
+                                className="h-56 bg-cover bg-center"
+                                style={{ backgroundImage: "url('/assets/services/mobile.png')" }}
+                            ></div>
+                            <div className="p-5">
+                                <h3 className="font-semibold text-lg">Mobile App Development</h3>
+                                <p className="mt-2 text-sm text-gray-400">
+                                    Our design team crafts beautiful and user-friendly interfaces that delight users.
+                                </p>
+                                <button className="mt-4 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 transition">
+                                    Learn more
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="bg-[#111111] border border-gray-800 rounded-lg overflow-hidden flex flex-col">
+                            <div
+                                className="h-56 bg-cover bg-center"
+                                style={{ backgroundImage: "url('/assets/services/uiux.png')" }}
+                            ></div>
+                            <div className="p-5">
+                                <h3 className="font-semibold text-lg">UI/UX</h3>
+                                <p className="mt-2 text-sm text-gray-400">
+                                    Beautiful, user-centered designs that improve engagement and usability.
+                                </p>
+                                <button className="mt-4 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 transition">
+                                    Learn more
+                                </button>
+                            </div>
+                        </div>
                     </div>
-
-                    <div className="p-6">
-                        <h4 className="font-semibold">Our principles</h4>
-                        <ol className="mt-3 space-y-2 text-sm text-slate-700">
-                            <li><strong>1. Evidence based</strong> — define solutions and align stakeholders based on discovery.</li>
-                            <li><strong>2. User-Centric</strong> — design around real user needs.</li>
-                            <li><strong>3. Fail fast, learn fast</strong> — test quickly and iterate.</li>
-                            <li><strong>4. Brand experience</strong> — keep brand at the forefront.</li>
-                            <li><strong>5. Market positioned</strong> — launch with research-led strategy.</li>
-                            <li><strong>6. Proven and tested</strong> — benchmark success through testing.</li>
-                        </ol>
-                    </div>
-                </aside> */}
-
-                {/* <aside className="border rounded-lg bg-slate-100 overflow-hidden flex flex-col">
-                    <div
-                        className="w-full h-40 md:h-50 bg-cover bg-center"
-                        style={{ backgroundImage: "url('/assets/services/img-3.png')" }}
-                    ></div>
-
-                    <div className="p-6">
-                        <h4 className="font-semibold">Our principles</h4>
-                        <ol className="relative border-l border-slate-300 mt-4 space-y-6">
-                            <li className="ml-6">
-                                <span className="absolute -left-2 mt-1 w-3 h-3 bg-[#1e00ff] rounded-full border"></span>
-                                <p className="text-sm text-slate-700">
-                                    <strong>Evidence based</strong> — define solutions and align stakeholders based on discovery.
-                                </p>
-                            </li>
-
-                            <li className="ml-6">
-                                <span className="absolute -left-2 w-3 h-3 bg-[#1e00ff] rounded-full border border-white"></span>
-                                <p className="text-sm text-slate-700">
-                                    <strong>User-Centric</strong> — design around real user needs.
-                                </p>
-                            </li>
-
-                            <li className="ml-6">
-                                <span className="absolute -left-2 w-3 h-3 bg-[#1e00ff] rounded-full border border-white"></span>
-                                <p className="text-sm text-slate-700">
-                                    <strong>Fail fast, learn fast</strong> — test quickly and iterate.
-                                </p>
-                            </li>
-
-                            <li className="ml-6">
-                                <span className="absolute -left-2 w-3 h-3 bg-[#1e00ff] rounded-full border border-white"></span>
-                                <p className="text-sm text-slate-700">
-                                    <strong>Brand experience</strong> — keep brand at the forefront.
-                                </p>
-                            </li>
-
-                            <li className="ml-6">
-                                <span className="absolute -left-2 w-3 h-3 bg-[#1e00ff] rounded-full border border-white"></span>
-                                <p className="text-sm text-slate-700">
-                                    <strong>Market positioned</strong> — launch with research-led strategy.
-                                </p>
-                            </li>
-
-                            <li className="ml-6">
-                                <span className="absolute -left-2 w-3 h-3 bg-[#1e00ff] rounded-full border border-white"></span>
-                                <p className="text-sm text-slate-700">
-                                    <strong>Proven and tested</strong> — benchmark success through testing.
-                                </p>
-                            </li>
-                        </ol>
-                    </div>
-                </aside> */}
+                </div>
             </div>
         </section>
     );
