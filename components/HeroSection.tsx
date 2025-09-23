@@ -1,10 +1,10 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { ChevronRightIcon } from "lucide-react";
+import CardSwap, { Card } from "./CardSwap";
+import { Button } from "./ui/button";
 
 function HeroSection() {
   return (
-    <section className="flex flex-col lg:flex-row text-white font-inter w-full px-4 sm:px-6 md:px-8 lg:px-0">
+    <section className="flex flex-col lg:flex-row text-white font-inter w-full px-4 sm:px-6 md:px-8 lg:px-0 justify-between items-center">
       {/* Left Content */}
       <div className="flex-1 flex flex-col justify-center space-y-4 sm:space-y-6 lg:w-1/2 h-full text-center lg:text-left">
         {/* Tagline */}
@@ -36,7 +36,7 @@ function HeroSection() {
             >
               <span className="text-base sm:text-lg font-medium flex items-center">
                 Learn more
-                <ChevronRight
+                <ChevronRightIcon
                   className="
                     ml-1 h-5 w-5
                     transition-transform duration-300 ease-out
@@ -59,6 +59,28 @@ function HeroSection() {
           </div>
         </div>
       </div>
+      <div style={{ height: "600px", position: "relative" }}>
+        <CardSwap
+          cardDistance={60}
+          verticalDistance={70}
+          delay={5000}
+          pauseOnHover={false}
+        >
+          <Card>
+            <h3>Card 1</h3>
+            <p>Your content here</p>
+          </Card>
+          <Card>
+            <h3>Card 2</h3>
+            <p>Your content here</p>
+          </Card>
+          <Card>
+            <h3>Card 3</h3>
+            <p>Your content here</p>
+          </Card>
+        </CardSwap>
+      </div>
+      {/* Right Content - CardSwap */}
     </section>
   );
 }
