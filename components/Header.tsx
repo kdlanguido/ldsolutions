@@ -94,7 +94,8 @@ export function Header() {
     return (
         <>
             {/* Desktop */}
-            <div className="hidden lg:flex items-center justify-between gap-8 fixed top-0 left-0 right-0 z-[100] bg-black/80 backdrop-blur-md p-5 h-[10vh]  ">
+            <div className="hidden md:flex items-center justify-between gap-8 fixed top-0 left-0 right-0 z-[100] bg-black/80 backdrop-blur-md p-5 h-[10vh]  ">
+
                 <Link className="flex items-center" href="/">
                     <Image className="h-auto w-[30] h-[auto] lg:w-[50]" src="/assets/ldlogo.png" alt="" width={50} height={150} />
                     <h1 className={`${geistMono.className} text-[10px] md:text-[18px] text-white `}>LD Solutions</h1>
