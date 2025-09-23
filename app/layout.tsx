@@ -2,7 +2,6 @@ import { Header } from "@/components/Header"
 import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import type { Metadata } from "next"
-import LoadingProvider from "@/components/LoadingProvider"
 import Footer from "@/components/Footer"
 
 export const metadata: Metadata = {
@@ -22,12 +21,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="min-h-screen flex flex-col">
             <Header />
-            <div className="flex-1">
-              <LoadingProvider>
-                  <main className="p-[30px] pt-[120px] lg:p-[0px] lg:pt-[120px]">
-                    {children}
-                  </main>
-              </LoadingProvider>
+            <div className="flex-1 mt-[10vh]">
+              <main>
+                {children}
+              </main>
             </div>
             <Footer />
           </div>
