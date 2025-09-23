@@ -94,13 +94,11 @@ export function Header() {
     return (
         <>
             {/* Desktop */}
-
             <div className="hidden lg:flex items-center justify-between gap-8 fixed top-0 left-0 right-0 z-[100] bg-black/80 backdrop-blur-md p-5 h-[10vh]  ">
                 <Link className="flex items-center" href="/">
                     <Image className="h-auto w-[30] h-[auto] lg:w-[50]" src="/assets/ldlogo.png" alt="" width={50} height={150} />
                     <h1 className={`${geistMono.className} text-[10px] md:text-[18px] text-white `}>LD Solutions</h1>
                 </Link>
-
                 <NavigationMenu>
                     <NavigationMenuList >
                         <NavigationMenuItem>
@@ -195,7 +193,6 @@ export function Header() {
 
                     </NavigationMenuList>
                 </NavigationMenu>
-
                 <NavigationMenu viewport={false}>
                     <NavigationMenuList>
                         <NavigationMenuItem>
@@ -220,15 +217,12 @@ export function Header() {
                     <Image className="h-auto" src="/assets/ldlogo.png" alt="" width={50} height={150} />
                     <h1 className={`${geistMono.className} text-[18px] text-white `}>LD Solutions</h1>
                 </Link>
-
                 <Sheet open={open} onOpenChange={setOpen}>
-
                     <SheetTrigger asChild>
                         <button className="p-2 text-white">
                             <MenuIcon className="w-6 h-6" />
                         </button>
                     </SheetTrigger>
-
                     <SheetContent side="right" className="w-[80%] sm:w-[60%] bg-black text-white p-5 flex min-h-[50vh] [&>button:last-of-type]:hidden">
                         <SheetHeader>
                             <SheetTitle>LDSolutions PH</SheetTitle>
