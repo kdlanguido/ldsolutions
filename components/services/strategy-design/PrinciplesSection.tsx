@@ -105,7 +105,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                         <ol className="relative border-l border-gray-700 mt-4 space-y-6">
                             {description.map((item, idx) => (
                                 <li key={idx} className="ml-4 relative">
-                                    <div className="absolute -left-5.5 mt-2 w-3 h-3 bg-[#1400AA] rounded-full border border-gray-900"></div>
+                                    <div className="absolute -left-5.5 mt-2 w-3 h-3 bg-[#53EAFD] rounded-full border border-gray-900"></div>
                                     <h4 className="text-white font-semibold">{item.heading}</h4>
                                     <p className="text-sm text-gray-400 mt-1">{item.text}</p>
                                 </li>
@@ -125,7 +125,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                     )}
 
                     {hasButton && (
-                        <button className="mt-4 px-4 py-2 text-sm font-medium text-white bg-[#1400AA] rounded hover:bg-indigo-700 transition">
+                        <button className="mt-4 px-4 w-40 py-2 text-sm font-medium text-white bg-[#53EAFD] rounded btn-sm">
                             Learn more
                         </button>
                     )}
