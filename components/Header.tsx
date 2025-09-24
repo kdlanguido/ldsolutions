@@ -13,69 +13,7 @@ import Image from "next/image"
 import { Geist_Mono } from "next/font/google"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet"
 import { useState } from "react"
-import HeaderMobileDropdown from "./HeaderMobileDropdown"
 import { Button } from "./ui/button"
-
-interface HeaderLinkI {
-    title: string;
-    href: string;
-    description: string
-}
-
-const serviceList: HeaderLinkI[] = [
-    {
-        title: "Strategy and Design",
-        href: "/services/strategy-design",
-        description:
-            "Crafting business strategies and design solutions that align with your goals.",
-    },
-    {
-        title: "Data Management",
-        href: "/services/data-management",
-        description:
-            "Helping you organize, govern, and optimize data to unlock insights.",
-    },
-    {
-        title: "Engineering & Architecture",
-        href: "/services/engineering",
-        description:
-            "Building reliable, high-performance applications and platforms.",
-    },
-    {
-        title: "Software As A Service",
-        href: "/services/saas",
-        description:
-            "Delivering scalable, subscription-based software solutions through the cloud.",
-    },
-]
-
-const aboutUsList: HeaderLinkI[] = [
-    {
-        title: "Who we are?",
-        href: "/about-us/who-we-are",
-        description: "Learn about our identity, values, and the principles that guide our work."
-    },
-    {
-        title: "Our story",
-        href: "/about-us/our-story",
-        description: "Discover our journey, milestones, and the vision that drives us forward."
-    },
-]
-
-const insightsLink = {
-    title: "Insights",
-    href: "/insights",
-}
-
-const ourProjectLink = {
-    title: "Our Projects",
-    href: "/projects",
-}
-
-const csLink = {
-    title: "Client Stories",
-    href: "/clients",
-}
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
