@@ -53,6 +53,7 @@ export function Header() {
                             <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
                                 <Link href="/#clients">Client Stories</Link>
                             </NavigationMenuLink>
+
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
