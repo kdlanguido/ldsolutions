@@ -32,13 +32,19 @@ const serviceList: HeaderLinkI[] = [
             "Crafting business strategies and design solutions that align with your goals.",
     },
     {
+        title: "Architecture",
+        href: "/services/architecture",
+        description:
+            "Designing scalable, secure, and future-ready system architectures.",
+    },
+    {
         title: "Data Management",
         href: "/services/data-management",
         description:
             "Helping you organize, govern, and optimize data to unlock insights.",
     },
     {
-        title: "Engineering & Architecture",
+        title: "Engineering",
         href: "/services/engineering",
         description:
             "Building reliable, high-performance applications and platforms.",
@@ -79,6 +85,44 @@ const csLink = {
     href: "/clients",
 }
 
+const industriesList: HeaderLinkI[] = [
+    {
+        title: "Real-Estate Systems",
+        href: "/services/strategy-design",
+        description: "Streamline property listings, sales, and management.",
+    },
+    {
+        title: "Book Keeping Systems",
+        href: "/services/architecture",
+        description: "Simplify financial tracking and reporting.",
+    },
+    {
+        title: "Information Systems",
+        href: "/services/data-management",
+        description: "Organize and manage data effectively.",
+    },
+    {
+        title: "Management Systems",
+        href: "/services/engineering",
+        description: "Optimize workflows and boost efficiency.",
+    },
+    {
+        title: "Appointment Systems",
+        href: "/services/saas",
+        description: "Schedule and manage bookings with ease.",
+    },
+    {
+        title: "E-Learning Management",
+        href: "/services/saas",
+        description: "Deliver and track online learning programs.",
+    },
+    {
+        title: "Business Profiles",
+        href: "/services/saas",
+        description: "Showcase company details and services online.",
+    },
+];
+
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
     subsets: ["latin"],
@@ -94,14 +138,14 @@ export function Header() {
     return (
         <>
             {/* Desktop */}
-            <div className="hidden md:flex items-center justify-between gap-8 fixed top-0 left-0 right-0 z-[100] bg-black/80 backdrop-blur-md p-5 h-[10vh]  ">
+            <div className="hidden md:flex items-center justify-between gap-8 fixed top-0 left-0 right-0 z-[100]  bg-black/80 backdrop-blur-md p-5">
                 <Link className="flex items-center" href="/">
-                    <Image className="h-auto w-[30] h-[auto] lg:w-[50]" src="/assets/ldlogo.png" alt="" width={50} height={150} />
-                    <h1 className={`${geistMono.className} text-[10px] md:text-[18px] text-white `}>LD Solutions</h1>
+                    <Image className="h-auto" src="/assets/ldlogo.png" alt="" width={50} height={150} />
+                    <h1 className={`${geistMono.className} text-[18px] text-white `}>LD Solutions</h1>
                 </Link>
 
-                <NavigationMenu>
-                    <NavigationMenuList >
+                <NavigationMenu viewport={false}>
+                    <NavigationMenuList>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger className={"bg-transparent hover:bg-transparent focus:bg-transparent cursor-pointer"}>
                                 Insights
@@ -180,6 +224,24 @@ export function Header() {
                                 </ul>
                             </NavigationMenuContent>
                         </NavigationMenuItem>
+
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent cursor-pointer">Industries</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                    {industriesList.map((industry) => (
+                                        <ListItem
+                                            key={industry.title}
+                                            title={industry.title}
+                                            href={industry.href}
+                                        >
+                                            {industry.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
                                 <Link href="/projects">Our Projects</Link>
@@ -241,6 +303,8 @@ export function Header() {
                             <HeaderMobileDropdown btnTitle="Our Services" closeFunction={closeSideBar} childLinks={serviceList} />
 
                             <HeaderMobileDropdown btnTitle="About Us" closeFunction={closeSideBar} childLinks={aboutUsList} />
+
+                            <HeaderMobileDropdown btnTitle="Industries" closeFunction={closeSideBar} childLinks={serviceList} />
 
                             <HeaderMobileDropdown btnTitle="Our Projects" closeFunction={closeSideBar} childLinks={ourProjectLink} />
 
