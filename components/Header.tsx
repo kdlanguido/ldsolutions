@@ -52,7 +52,7 @@ export function Header() {
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
                                 <Link href="/#clients">Client Stories</Link>
-                            </NavigationMenuLink>
+                        </NavigationMenuLink>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
