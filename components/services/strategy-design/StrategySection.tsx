@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 export default function StrategySection() {
     return (
-        <section className="relative text-white mt-7">
+        <section className="text-white mt-7">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
                 <div className="mx-auto max-w-7xl px-6 lg:px-15">
                     <p className="text-sm font-semibold text-[#1e00ff] uppercase">
@@ -34,16 +34,13 @@ export default function StrategySection() {
                     </div>
                 </div>
                 <Image
-                    src="/assets/services/img-1.png"
+                    src="/assets/services/img-1.webp"
                     alt="Strategy illustration"
-                    width={800}   
+                    width={800}
                     height={600}
                     className="w-full h-auto"
+                    loading="lazy"
                 />
-
-            </div>
-            <div className="absolute -bottom left-0 w-full overflow-hidden leading-[0]">
-                <svg className="relative block w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0A0A0A" fillOpacity="1" d="M0,128L120,112C240,96,480,64,720,74.7C960,85,1200,139,1320,165.3L1440,192L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
             </div>
         </section>
 
