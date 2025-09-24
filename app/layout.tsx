@@ -21,8 +21,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="min-h-screen flex flex-col">
             <Header />
-            <div className="flex-1">
-              <main className="pt-0 lg:p-[0px] lg:pt-[120px]">
+            <div className="flex-1 mt-[10vh]">
+              <main>
                 {children}
               </main>
             </div>
