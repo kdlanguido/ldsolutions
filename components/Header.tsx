@@ -52,7 +52,7 @@ export function Header() {
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
                                 <Link href="/#clients">Client Stories</Link>
-                        </NavigationMenuLink>
+                            </NavigationMenuLink>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
@@ -103,7 +103,16 @@ export function Header() {
                             <Link onClick={closeSideBar} href="#clients">Client Stories</Link>
                             <Link onClick={closeSideBar} href="#about">About Us</Link>
                         </nav>
-                        <Button><PhoneCallIcon /> Contact Us</Button>
+                        <Button>
+                            <Link
+                                href="/contact-us"
+                                onClick={closeSideBar}
+                                className="flex items-center flex-row gap-2 font-semibold bg-transparent focus:bg-transparent cursor-pointer animate-wiggle"
+                            >
+                                <PhoneCallIcon />
+                                Contact Us
+                            </Link>
+                        </Button>
                     </SheetContent>
                 </Sheet>
             </div>
