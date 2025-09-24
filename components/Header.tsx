@@ -39,25 +39,25 @@ export function Header() {
                     <NavigationMenuList className="gap-4">
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
-                                <Link href="#services">Our Services</Link>
+                                <Link href="/#services" >Our Services</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
-                                <Link href="#projects">Our Projects</Link>
+                                <Link href="/#projects">Our Projects</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
-                                <Link href="#clients">Client Stories</Link>
+                                <Link href="/#clients">Client Stories</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="font-semibold bg-transparent focus:bg-transparent cursor-pointer">
-                                <Link href="#projects">About Us</Link>
+                                <Link href="/#projects">About Us</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
 

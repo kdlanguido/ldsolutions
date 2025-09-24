@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="relative bg-gradient-to-b from-transparent via-[#003B5F]/60 to-[#001726] text-white pb-8 pt-10 p-8 overflow-hidden w-full">
+        <footer className="relative bg-gradient-to-b from-black via-[#003B5F]/60 to-[#001726] text-white pb-8 pt-10 p-8 overflow-hidden w-full">
             <div className="absolute inset-0 opacity-40 pointer-events-none bg-[url('/assets/wave.svg')] bg-repeat-x bg-bottom"></div>
             <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
