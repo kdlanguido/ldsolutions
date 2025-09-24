@@ -160,11 +160,10 @@ export function Header() {
                             <SheetTitle>LDSolutions PH</SheetTitle>
                         </SheetHeader>
                         <nav className="flex flex-col px-4 gap-3 flex-1">
-                            <HeaderMobileDropdown btnTitle="Insights" closeFunction={closeSideBar} childLinks={insightsLink} />
-                            <HeaderMobileDropdown btnTitle="Our Services" closeFunction={closeSideBar} childLinks={serviceList} />
-                            <HeaderMobileDropdown btnTitle="About Us" closeFunction={closeSideBar} childLinks={aboutUsList} />
-                            <HeaderMobileDropdown btnTitle="Our Projects" closeFunction={closeSideBar} childLinks={ourProjectLink} />
-                            <HeaderMobileDropdown btnTitle="Client Stories" closeFunction={closeSideBar} childLinks={csLink} />
+                            <Link onClick={closeSideBar} href="#services">Our Services</Link>
+                            <Link onClick={closeSideBar} href="#projects">Our Projects</Link>
+                            <Link onClick={closeSideBar} href="#clients">Client Stories</Link>
+                            <Link onClick={closeSideBar} href="#about">About Us</Link>
                         </nav>
                         <Button><PhoneCallIcon /> Contact Us</Button>
                     </SheetContent>
