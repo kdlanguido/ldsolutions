@@ -113,7 +113,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                         </ol>
                     ) : isQuote ? (
                         <div>
-                            <blockquote className="border-l-4 border-[#1400AA] pl-4 italic text-gray-300">
+                            <blockquote className="border-l-4 border-[#53EAFD] pl-4 italic text-gray-300">
                                 “{description.split("Mark Heath")[0].trim()}”
                             </blockquote>
                             <p className="mt-5 text-sm text-gray-400 font-medium">
