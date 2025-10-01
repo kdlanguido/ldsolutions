@@ -10,10 +10,16 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { MdArrowBack } from "react-icons/md"
 
 const items = [
     {
-        title: "Home",
+        title: "Back to Client View",
+        url: "/",
+        icon: MdArrowBack,
+    },
+    {
+        title: "Dashboard Home",
         url: "/dashboard",
         icon: Home,
     },
