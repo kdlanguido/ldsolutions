@@ -17,6 +17,7 @@ export default function Page() {
     const [clientFirstName, setClientFirstName] = useState("");
     const [clientLastName, setClientLastName] = useState("");
     const [clientMessage, setClientMessage] = useState("");
+    const [isMessageSending, setIsMessageSending] = useState(false);
 
     const router = useRouter();
 
@@ -26,6 +27,8 @@ export default function Page() {
     const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => setClientMessage(e.target.value);
 
     const handleSendEmail = async () => {
+
+        setIsMessageSending(true)
 
         const clientInputStringified = JSON.stringify({
             clientFirstName: clientFirstName,
@@ -59,9 +62,8 @@ export default function Page() {
                 toast("Thank you for reaching us out!", {
                     description: `We've received your message and our team will review it shortly.`,
                 })
-
                 clearForm()
-                router.push("/")
+                setIsMessageSending(false)
             } else {
                 toast("Encountered an Error", {
                     description: `Kindly contact the administrator for further assistance.`,
@@ -119,8 +121,11 @@ export default function Page() {
                     />
 
                     <Button
-                        className="cursor-pointer hover:!bg-white hover:!text-black w-full mx-auto mt-2" onClick={handleSendEmail}>
-                        Send <Send />
+                        className="cursor-pointer hover:!bg-white hover:!text-black w-full mx-auto mt-2" onClick={handleSendEmail}
+                        disabled={isMessageSending}
+                    >
+                        {isMessageSending && <span>Sending...</span>}
+                        {!isMessageSending && <><span>Send </span><Send /></>}
                     </Button>
 
 
