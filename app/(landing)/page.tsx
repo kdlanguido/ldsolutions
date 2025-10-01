@@ -8,7 +8,6 @@ export default function Page() {
     <div className="px-4 sm:px-8 md:px-16 space-y-20 mb-20">
       <HeroSection />
       <WwdSection />
-      {/* TechLoop Section */}
       <div className="-mx-4 sm:-mx-8 md:-mx-16">
         <TechLoop />
       </div>
