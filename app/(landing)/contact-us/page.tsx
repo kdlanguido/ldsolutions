@@ -27,30 +27,51 @@ export default function Page() {
 
     const handleSendEmail = async () => {
 
-        const emailSendingRes = await fetch('/api/send-email-contactus', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                firstName: clientFirstName,
-                lastName: clientLastName,
-                email: clientEmail,
-            }),
-        });
+        const clientInputStringified = JSON.stringify({
+            clientFirstName: clientFirstName,
+            clientLastName: clientLastName,
+            clientEmail: clientEmail,
+            clientMessage: clientMessage
+        })
 
-        if (emailSendingRes.status === 200) {
-            toast("Thank you for reaching us out!", {
-                description: `We've received your message and our team will review it shortly.`,
-            })
+        const saveMessageToMongo = await fetch('/api/messages', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: clientInputStringified
+        })
+
+        if (saveMessageToMongo.status === 201) {
+            const emailSendingRes = await fetch('/api/send-email-contactus', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    firstName: clientFirstName,
+                    lastName: clientLastName,
+                    email: clientEmail,
+                }),
+            });
+
+            if (emailSendingRes.status === 200) {
+                toast("Thank you for reaching us out!", {
+                    description: `We've received your message and our team will review it shortly.`,
+                })
+
+                clearForm()
+                router.push("/")
+            } else {
+                toast("Encountered an Error", {
+                    description: `Kindly contact the administrator for further assistance.`,
+                })
+            }
         } else {
-            toast("Encountered an Error", {
+            toast("Saving your message failed", {
                 description: `Kindly contact the administrator for further assistance.`,
             })
         }
-
-        clearForm()
-        router.push("/")
     }
 
     const clearForm = () => {
