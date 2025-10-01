@@ -16,7 +16,7 @@ import {
 import { MessageI } from "@/models/Message.model"
 
 export async function DashboardMessagesTable() {
-    const res = await fetch("http://localhost:3000/api/messages", {
+    const res = await fetch(`${process.env.STG_URL}/api/messages`, {
         cache: "no-store",
     });
 
@@ -51,7 +51,6 @@ export async function DashboardMessagesTable() {
                                         <TableCell>{message.clientMessage}</TableCell>
                                     </TableRow>
                                 </ContextMenuTrigger>
-
                                 <ContextMenuContent>
                                     <ContextMenuItem className="cursor-pointer">Reply</ContextMenuItem>
                                     <ContextMenuItem className="cursor-pointer">Archive</ContextMenuItem>
