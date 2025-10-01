@@ -7,7 +7,6 @@ import { Separator } from '@/components/ui/separator'
 import { Textarea } from '@/components/ui/textarea'
 import { Mail, PhoneCallIcon, Send } from 'lucide-react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 import { toast } from "sonner"
 
@@ -18,8 +17,6 @@ export default function Page() {
     const [clientLastName, setClientLastName] = useState("");
     const [clientMessage, setClientMessage] = useState("");
     const [isMessageSending, setIsMessageSending] = useState(false);
-
-    const router = useRouter();
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => setClientEmail(e.target.value);
     const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => setClientFirstName(e.target.value);
@@ -121,13 +118,19 @@ export default function Page() {
                     />
 
                     <Button
-                        className="cursor-pointer hover:!bg-white hover:!text-black w-full mx-auto mt-2" onClick={handleSendEmail}
+                        className="cursor-pointer hover:!bg-white hover:!text-black w-full mx-auto mt-2"
+                        onClick={handleSendEmail}
                         disabled={isMessageSending}
                     >
-                        {isMessageSending && <span>Sending...</span>}
-                        {!isMessageSending && <><span>Send </span><Send /></>}
+                        {isMessageSending ? (
+                            <span>Sending...</span>
+                        ) : (
+                            <>
+                                <span>Send</span>
+                                <Send />
+                            </>
+                        )}
                     </Button>
-
 
                     <h2 className="text-lg sm:text-xl font-bold text-center mt-5">
                         Or reach us out
