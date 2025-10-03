@@ -16,7 +16,6 @@ import {
 import { MessageI } from "@/models/Message.model"
 
 export async function DashboardMessagesTable() {
-
     const res = await fetch(`${process.env.STG_URL}/api/messages`, {
         cache: "no-store",
     });
